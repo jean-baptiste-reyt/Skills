@@ -1,10 +1,13 @@
-# Skills
-
 Claude Code skills I actually run in production, cleaned of anything company-specific so other people can read them and adapt the ones they want.
+These aren't demos; each one grew out of a real, sometimes painful, iteration with a real workflow.
 
-## What "skill" means here
+## Skills in this repo
 
-A skill is a markdown playbook Claude Code loads on demand — it tells the agent what tool to call, in what order, and what the guardrails are for a specific recurring job. These aren't demos; each one grew out of a real, sometimes painful, iteration with a real workflow.
+| Skill | What it does |
+|---|---|
+| [`design-debt-resolver`](./skills/design-debt-resolver/SKILL.md) | Polls a Notion backlog of designer-flagged UI/copy fixes, implements the surgical ones, opens a draft PR with before/after screenshots, handles review back-and-forth, and self-merges once an engineer approves. |
+
+More will land here as I clean them up. This isn't a framework or a curated "best of" list — it's my own working set, published as I get around to redacting each one.
 
 ## What you're getting (read this before trying one)
 
@@ -16,13 +19,6 @@ Every skill here was extracted from one specific company's stack. I replaced any
 
 If you want to actually run one, the honest path is: read it end to end, list every `[PLACEHOLDER]`, decide what your equivalent is, and expect to cut or rewrite the parts that don't map to your stack (mine references a Next.js monorepo with a merge queue and a specific translation-file layout — yours probably doesn't look like that).
 
-## Skills in this repo
-
-| Skill | What it does |
-|---|---|
-| [`design-debt-resolver`](./skills/design-debt-resolver/SKILL.md) | Polls a Notion backlog of designer-flagged UI/copy fixes, implements the surgical ones, opens a draft PR with before/after screenshots, handles review back-and-forth, and self-merges once an engineer approves. |
-
-More will land here as I clean them up. This isn't a framework or a curated "best of" list — it's my own working set, published as I get around to redacting each one.
 
 ## Using one of these with Claude Code
 
