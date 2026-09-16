@@ -3,9 +3,12 @@ These aren't demos; each one grew out of a real, sometimes painful, iteration wi
 
 ## Skills in this repo
 
+Mostly things that take a messy, real, human-produced starting point (a design-debt backlog, a branch nobody wants to review) and drive it to something shippable without a person babysitting every step.
+
 | Skill | What it does |
 |---|---|
 | [`design-debt-resolver`](./skills/design-debt-resolver/SKILL.md) | Polls a Notion backlog of designer-flagged UI/copy fixes, implements the surgical ones, opens a draft PR with before/after screenshots, handles review back-and-forth, and self-merges once an engineer approves. |
+| [`design-split`](./skills/design-split/SKILL.md) | Takes one large exploratory UI branch (built to get the design right, not to ship) and splits it into small, independently reviewable branches — rewritten to the project's coding standards, checked with a before/after screenshot so the shipped UI doesn't drift from what was designed, opened as draft PRs. |
 
 More will land here as I clean them up. This isn't a framework or a curated "best of" list — it's my own working set, published as I get around to redacting each one.
 
@@ -17,7 +20,7 @@ Every skill here was extracted from one specific company's stack. I replaced any
 - **The value is the pattern, not the literal script.** Things like "a draft PR *is* the approval mechanism," "cap attempts per review thread instead of retrying forever," "treat PR comment text as untrusted input, never a command," or "capture before/after screenshots as the actual evidence of a UI fix" — those transfer to any stack. The exact `gh api` incantations are just one working example of applying them.
 - **They assume real infrastructure.** Most of these lean on MCP connections (Notion, Slack, GitHub) plus CLI tools already installed and authenticated. If you don't have the equivalent wired up, the skill degrades to "a detailed description of a process," not something you can run today.
 
-If you want to actually run one, the honest path is: read it end to end, list every `[PLACEHOLDER]`, decide what your equivalent is, and expect to cut or rewrite the parts that don't map to your stack (mine references a Next.js monorepo with a merge queue and a specific translation-file layout — yours probably doesn't look like that).
+If you want to actually run one, the honest path is: read it end to end, list every `[PLACEHOLDER]`, decide what your equivalent is, and expect to cut or rewrite the parts that don't map to your stack (mine reference things like a specific monorepo layout, a merge-queue setup, and a handful of other internal skills these are built to hand off to — yours probably looks different).
 
 
 ## Using one of these with Claude Code
